@@ -1,0 +1,17 @@
+{
+    "short_name": "Plantronics",
+    "name": "Plantronics Plant Tracker",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "icon512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#189418",
+    "description": "Plantronics Plant Tracking App"
+}
