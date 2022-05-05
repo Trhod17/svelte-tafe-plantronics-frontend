@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { getUserDetails, store } from '../hooks/auth';
+	import { registerUser, store } from '../hooks/auth';
 	import { createForm } from 'felte';
 	import * as yup from 'yup';
 	import YupPassword from 'yup-password';
@@ -82,40 +82,43 @@
 		}
 	});
 
-	// let error = '';
+	let error = '';
 
-	// async function login() {
-	// 	//console.log($data.account.username, $data.account.password);
-	// 	const user = await getUserDetails($data.account.username, $data.account.password);
-	// 	if (user) {
-	// 		let userObj = [$data.account.username, user];
-	// 		$store = userObj;
-	// 		if (error) error = '';
-	// 	} else {
-	// 		error = 'Incorrect username and password.';
-	// 		loginMessage = error;
-	// 		console.log('Incorrect username and password.');
-	// 	}
-	// }
-
-	async function register() {}
+	async function register() {
+		//console.log($data.account.username, $data.account.password);
+		const user = await registerUser($data.account.username, $data.account.firstname, $data.account.lastname, $data.account.email, $data.account.password);
+		if (user) {
+			let userObj = [$data.account.username, user];
+			$store = userObj;
+			if (error) error = '';
+		} else {
+			console.log('failed');
+		}
+	}
 
 	let usernameTaken = false;
 	const hasUpperCase = (str) => /[a-z]/.test(str) && /[A-Z]/.test(str);
 
 	const hasNumber = (str) => /\d/.test(str);
 
-	function allowSubmit() {}
-
 	let password2 = '';
-	let isDisabled: boolean = true;
 
-	let canSubmit = false;
+	$: canSubmit = false;
 	$: usernameValid = false;
 	$: passwordValid = false;
 	$: fNameValid = false;
 	$: lNameValid = false;
 	$: emailValid = false;
+
+	$: accept = false;
+    $: unlock = accept ? unlockSubmit(): accept=false;
+
+	function unlockSubmit() {
+		if ((usernameValid && passwordValid && fNameValid && lNameValid && emailValid) == true) {
+			canSubmit = true;
+			return true;
+		}
+	}
 
 	function inputInvalid(input, message) {
 		switch (input) {
@@ -129,12 +132,13 @@
 				emailValid = false;
 				return message;
 			case 'fname':
-
+				fNameValid = false;
+				return message;
 			case 'lname':
-
+				lNameValid = false;
+				return message;
 			default:
 				return message;
-				break;
 		}
 	}
 
@@ -151,14 +155,34 @@
 				emailValid = true;
 				return message;
 			case 'fname':
-
+				fNameValid = true;
+				return message;
 			case 'lname':
-
+				lNameValid = true;
+				return message;
 			default:
 				return message;
 				break;
 		}
 	}
+
+	function validateName(option, name) {
+		const nameLength = name.length;
+
+		if (nameLength == 0) {
+			return inputInvalid(option, 'First name required');
+		}
+		if (nameLength <= 2) {
+			return inputInvalid(option, 'First name to short');
+		}
+		if (nameLength >= 3) {
+			return inputValid(option, 'First name is valid');
+		}
+	}
+
+	$: fNameMessage = validateName('fname', $data.account.firstname);
+	$: lNameMessage = validateName('lname', $data.account.lastname);
+
 
 	function validateEmail(email) {
 		const isValid =
@@ -269,7 +293,10 @@
 			class="input input-bordered w-full max-w-xs"
 			required
 			autocomplete="given-name"
+			class:input-error={!fNameValid}
+			class:input-success={fNameValid}
 		/>
+		<div>{fNameMessage}</div>
 	</div>
 	<div class="p-2" />
 	<div class="form-control w-full max-w-xs">
@@ -286,7 +313,10 @@
 			class="input input-bordered w-full max-w-xs"
 			required
 			autocomplete="family-name"
+			class:input-error={!lNameValid}
+			class:input-success={lNameValid}
 		/>
+		<div>{lNameMessage}</div>
 	</div>
 	<div class="p-2" />
 	<div class="form-control w-full max-w-xs">
@@ -349,7 +379,13 @@
 		<div>{passwordMessage2}</div>
 	</div>
 	<div class="p-2" />
-	<input type="submit" value="Register" disabled={!canSubmit} class="btn btn-accent w-50 " />
+	<div class="form-control w-full max-w-xs">
+		<label class="label cursor-pointer">
+			<span class="label-text">Accept Terms and Conditions</span>
+			<input type="checkbox" class="toggle toggle-primary" bind:checked={accept} on:input>
+		  </label>
+	<input type="submit" value="Register" disabled={!canSubmit} class="btn btn-accent w-50 "/>
+	</div>
 </form>
 
 <style>

@@ -2,13 +2,13 @@
 	import { store } from '../hooks/auth';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/env';
+	import MyPlants from './myPlants.svelte';
 
 	export let data: any = [];
 
 	onMount(async () => {
 		let headersList = {
 			Accept: '*/*',
-			'User-Agent': 'Thunder Client (https://www.thunderclient.com)',
 			Authorization: 'Token ' + $store[1].replace(/[^a-zA-Z0-9 ]/g, '').replace('token', '')
 		};
 
@@ -51,5 +51,5 @@
 		</ul>
 	</div>
 </div>
-<div class="card" class:hidden={activeTab != 1}>Content 2</div>
+<div class="card" class:hidden={activeTab != 1}><MyPlants /></div>
 <div class="card" class:hidden={activeTab != 2}>Content 3</div>
