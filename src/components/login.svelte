@@ -14,22 +14,6 @@
 
 	let submitted;
 
-	// Setting validation messages
-	// yup.setLocale({
-	// 	mixed: {
-	// 		default: 'Not valid',
-	// 		required: 'Must not be empty'
-	// 	},
-	// 	string: {
-	// 		default: 'Must be a string',
-	// 		email: 'Must be a valid username',
-	// 		min: 'Must not be empty'
-	// 	}
-	// });
-
-	//.minUppercase(1).minNumbers(1).max(128).min(8)
-	//.max(64).min(2)
-
 	// Creating yup schema
 	const schema = yup.object({
 		account: yup.object({
@@ -57,35 +41,6 @@
 		},
 		onSubmit(values) {},
 		extend: [validator({ schema }), reporter()]
-		// Debounced async validation
-		// debounced: {
-		// 	timeout: 1000,
-		// 	validate: async (values) => {
-		// 		return new Promise((resolve) => {
-		// 			setTimeout(() => {
-		// 				// let headersList = {
-		// 				// 	Accept: '*/*',
-		// 				// 	'Content-Type': 'application/api.vnd+json',
-		// 				// 	Authorization: 'Basic ZnJvbnRlbmQ6UTM4VFZCOVlOUlh6QWc='
-		// 				// };
-		// 				// let bodyContent = JSON.stringify({
-		// 				// 	user: values.account.username
-		// 				// });
-		// 				// if (values.account.username != '') {
-		// 				// 	fetch('http://127.0.0.1:8000/user/', {
-		// 				// 		method: 'POST',
-		// 				// 		body: bodyContent,
-		// 				// 		headers: headersList
-		// 				// 	}).then(function (response) {
-		// 				// 		if (response.status == 302)
-		// 				// 			usernameMessage = 'This username is already in use please pick another';
-		// 				// 		if (response.status == 200) usernameMessage = 'This username is available';
-		// 				// 	});
-		// 				// }
-		// 			}, 100);
-		// 		});
-		// 	}
-		// }
 	});
 
 	let error = '';
@@ -93,7 +48,7 @@
 	async function login() {
 		if ($data.account.username != '' && $data.account.password != '') {
 			const user = await getUserDetails($data.account.username, $data.account.password);
-			if (user) {
+			if (user != 'error') {
 				let userObj = [$data.account.username, user];
 				$store = userObj;
 				if (error) error = '';
@@ -151,6 +106,7 @@
 			autocomplete="current=password"
 		/>
 	</div>
+	<div>{loginMessage}</div>
 	<div class="p-2" />
 	<input type="submit" value="Login" class="btn btn-accent w-50 " />
 </form>

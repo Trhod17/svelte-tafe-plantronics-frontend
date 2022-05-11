@@ -38,7 +38,11 @@ export const registerUser = async (username: string, firstname: string, lastname
 		body: bodyContent,
 		headers: headersList
 	}).then(function (response) {
-		return response.text();
+		if (response.status != 201) {
+			return 'error'
+		} else {
+			return response.text();
+		}
 	}).then(function (data) {
 		return data;
 	})
@@ -64,7 +68,11 @@ export const getUserDetails = async (user: string, pass: string) => {
 		body: bodyContent,
 		headers: headersList
 	}).then(function (response) {
-		return response.text();
+		if (response.status != 201) {
+			return 'error'
+		} else {
+			return response.text();
+		}
 	}).then(function (data) {
 		return data;
 	})

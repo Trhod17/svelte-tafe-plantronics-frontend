@@ -10,16 +10,9 @@
 </script>
 
 <svelte:head>
-	<!-- <link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/simplex/bootstrap.min.css"
-		integrity="sha512-MkI4WaJcuXvOVZPwGbYYSeq9qOPLI3dLVJhuf+vuaLgwLzC/PwLh1EzivMsoYn7Hl/VUQqPb4u4oTS2/XMJ4uQ=="
-		crossorigin="anonymous"
-		referrerpolicy="no-referrer"
-	/>
-
-	<meta name="color-scheme" content={$theme == 'light' ? 'dark' : $theme} />
-	<link rel="stylesheet" href={`/theme/${$theme}.css`} /> -->
+	<link rel="manifest" crossorigin="use-credentials" href="/manifest.json" />
+	<link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
+	<link rel="icon" href="/favicon.png" />
 </svelte:head>
 <NavBar />
 

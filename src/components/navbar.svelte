@@ -12,6 +12,7 @@
 <div class="navbar bg-primary">
 	<div class="navbar-start">
 		<div class="dropdown bg-primary">
+			<!-- svelte-ignore a11y-label-has-associated-control -->
 			<label tabindex="0" class="btn btn-ghost lg:hidden">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -35,14 +36,16 @@
 				<li><a sveltekit:prefetch href="/about">About</a></li>
 				{#if $store != null}
 					<li><a sveltekit:prefetch href="/profile">{$store[0]}</a></li>
-					<li><a on:click={logout} href="#">Logout</a></li>
+					<li><a on:click={logout} href="/">Logout</a></li>
 				{:else}
 					<li><a sveltekit:prefetch href="/login">Login</a></li>
 					<li><a sveltekit:prefetch href="/register">Signup</a></li>
 				{/if}
 			</ul>
 		</div>
-		<a class="btn btn-ghost normal-case text-xl text-primary-content">Plantronics</a>
+		<a class="btn btn-ghost normal-case text-xl text-primary-content" sveltekit:prefetch href="/"
+			>Plantronics</a
+		>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal p-0">
@@ -50,7 +53,7 @@
 			<li><a sveltekit:prefetch href="/about">About</a></li>
 			{#if $store != null}
 				<li><a sveltekit:prefetch href="/profile">{$store[0]}</a></li>
-				<li><a on:click={logout} href="#">Logout</a></li>
+				<li><a on:click={logout} href="/">Logout</a></li>
 			{:else}
 				<li><a sveltekit:prefetch href="/login">Login</a></li>
 				<li><a sveltekit:prefetch href="/register">Signup</a></li>

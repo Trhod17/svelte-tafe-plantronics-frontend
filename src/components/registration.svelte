@@ -86,8 +86,14 @@
 
 	async function register() {
 		//console.log($data.account.username, $data.account.password);
-		const user = await registerUser($data.account.username, $data.account.firstname, $data.account.lastname, $data.account.email, $data.account.password);
-		if (user) {
+		const user = await registerUser(
+			$data.account.username,
+			$data.account.firstname,
+			$data.account.lastname,
+			$data.account.email,
+			$data.account.password
+		);
+		if (user != 'error') {
 			let userObj = [$data.account.username, user];
 			$store = userObj;
 			if (error) error = '';
@@ -111,7 +117,7 @@
 	$: emailValid = false;
 
 	$: accept = false;
-    $: unlock = accept ? unlockSubmit(): accept=false;
+	$: unlock = accept ? unlockSubmit() : (accept = false);
 
 	function unlockSubmit() {
 		if ((usernameValid && passwordValid && fNameValid && lNameValid && emailValid) == true) {
@@ -183,7 +189,6 @@
 	$: fNameMessage = validateName('fname', $data.account.firstname);
 	$: lNameMessage = validateName('lname', $data.account.lastname);
 
-
 	function validateEmail(email) {
 		const isValid =
 			/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
@@ -248,7 +253,7 @@
 
 <svelte:head>
 	<title>Register</title>
-	<meta name="description" content="Plantronics Login Page" />
+	<meta name="description" content="Plantronics Registration Page" />
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -382,9 +387,9 @@
 	<div class="form-control w-full max-w-xs">
 		<label class="label cursor-pointer">
 			<span class="label-text">Accept Terms and Conditions</span>
-			<input type="checkbox" class="toggle toggle-primary" bind:checked={accept} on:input>
-		  </label>
-	<input type="submit" value="Register" disabled={!canSubmit} class="btn btn-accent w-50 "/>
+			<input type="checkbox" class="toggle toggle-primary" bind:checked={accept} on:input />
+		</label>
+		<input type="submit" value="Register" disabled={!canSubmit} class="btn btn-accent w-50 " />
 	</div>
 </form>
 

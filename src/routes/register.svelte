@@ -9,8 +9,8 @@
 </script>
 
 <svelte:head>
-	<title>Login</title>
-	<meta name="description" content="Plantronics Login Page" />
+	<title>Registration</title>
+	<meta name="description" content="Plantronics Registration Page" />
 </svelte:head>
 
 {#if $store != null}
