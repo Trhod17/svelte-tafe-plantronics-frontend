@@ -57,7 +57,7 @@
 							user: values.account.username
 						});
 						if (values.account.username != '') {
-							fetch('http://127.0.0.1:8000/user/', {
+							fetch('https://plantronics-backend.herokuapp.com/user/', {
 								method: 'POST',
 								body: bodyContent,
 								headers: headersList

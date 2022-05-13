@@ -20,7 +20,7 @@
 			id: slug
 		});
 
-		return fetch('http://127.0.0.1:8000/plantsoil/', {
+		return fetch('https://plantronics-backend.herokuapp.com/plantsoil/', {
 			method: 'POST',
 			body: bodyContent,
 			headers: headersList

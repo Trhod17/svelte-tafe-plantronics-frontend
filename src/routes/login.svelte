@@ -18,6 +18,6 @@
 {:else}
 	<LoginComponent />
 {/if}
-
+<!--feedback Make text bigger -->
 <style>
 </style>

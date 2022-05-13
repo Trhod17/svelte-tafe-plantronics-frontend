@@ -33,7 +33,7 @@ export const registerUser = async (username: string, firstname: string, lastname
 		"password": password
 	});
 
-	return fetch("http://127.0.0.1:8000/signup/", {
+	return fetch("https://plantronics-backend.herokuapp.com/signup/", {
 		method: "POST",
 		body: bodyContent,
 		headers: headersList
@@ -63,7 +63,7 @@ export const getUserDetails = async (user: string, pass: string) => {
 		"password": pass
 	});
 
-	return fetch("http://127.0.0.1:8000/login/", {
+	return fetch("https://plantronics-backend.herokuapp.com/login/", {
 		method: "POST",
 		body: bodyContent,
 		headers: headersList

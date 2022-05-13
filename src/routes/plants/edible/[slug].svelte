@@ -18,10 +18,10 @@
 		};
 
 		let bodyContent = JSON.stringify({
-			id: slug
+			id: params.slug
 		});
 
-		return fetch('http://127.0.0.1:8000/plantedible/', {
+		return fetch('https://plantronics-backend.herokuapp.com/plantedible/', {
 			method: 'POST',
 			body: bodyContent,
 			headers: headersList
@@ -36,6 +36,7 @@
 				edible = data;
 				return data;
 			});
+
 	}
 </script>
 

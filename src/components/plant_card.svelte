@@ -5,7 +5,7 @@
 
 	export let data: any = [];
 	onMount(async () => {
-		const res = await fetch(`http://localhost:8000/getplants`);
+		const res = await fetch(`https://plantronics-backend.herokuapp.com/getplants`);
 		data = await res.json();
 		//console.log(JSON.stringify(data, null, 2));
 	});
