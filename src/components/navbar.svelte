@@ -13,7 +13,7 @@
 	<div class="navbar-start">
 		<div class="dropdown bg-primary">
 			<!-- svelte-ignore a11y-label-has-associated-control -->
-			<label tabindex="0" class="btn btn-ghost lg:hidden">
+			<label tabindex="0" class="btn btn-ghost lg:hidden w-55">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="h-5 w-5"
@@ -30,16 +30,34 @@
 			</label>
 			<ul
 				tabindex="0"
-				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary text-primary-content rounded-box w-52"
+				class="menu dropdown-content mt-4 p-5 shadow bg-primary text-primary-content rounded-box w-60"
 			>
-				<li><a sveltekit:prefetch href="/">Home</a></li>
-				<li><a sveltekit:prefetch href="/about">About</a></li>
+				<li class="mx-auto">
+					<a sveltekit:prefetch class="text-lg" href="/"><i class="fa-solid fa-house" />Home</a>
+				</li>
+				<li class="mx-auto"><a sveltekit:prefetch class="text-lg" href="/about">About</a></li>
 				{#if $store != null}
-					<li><a sveltekit:prefetch href="/profile">{$store[0]}</a></li>
-					<li><a on:click={logout} href="/">Logout</a></li>
+					<li class="mx-auto">
+						<a sveltekit:prefetch class="text-lg" href="/profile"
+							><i class="fa-solid fa-user" />{$store[0]}</a
+						>
+					</li>
+					<li class="mx-auto">
+						<a on:click={logout} class="text-lg" href="/"
+							><i class="fa-solid fa-arrow-up-left-from-circle"> a</i>Logout</a
+						>
+					</li>
 				{:else}
-					<li><a sveltekit:prefetch href="/login">Login</a></li>
-					<li><a sveltekit:prefetch href="/register">Signup</a></li>
+					<li class="mx-auto">
+						<a sveltekit:prefetch class="text-lg" href="/login"
+							><i class="fa-solid fa-arrow-right-to-bracket" />Login</a
+						>
+					</li>
+					<li class="mx-auto">
+						<a sveltekit:prefetch class="text-lg" href="/register"
+							><i class="fa-solid fa-user-plus" />Signup</a
+						>
+					</li>
 				{/if}
 			</ul>
 		</div>
@@ -49,14 +67,24 @@
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal p-0">
-			<li><a sveltekit:prefetch href="/">Home</a></li>
+			<li><a sveltekit:prefetch href="/"><i class="fa-solid fa-house" />Home</a></li>
 			<li><a sveltekit:prefetch href="/about">About</a></li>
 			{#if $store != null}
-				<li><a sveltekit:prefetch href="/profile">{$store[0]}</a></li>
-				<li><a on:click={logout} href="/">Logout</a></li>
+				<li><a sveltekit:prefetch href="/profile"><i class="fa-solid fa-user" />{$store[0]}</a></li>
+				<li>
+					<a on:click={logout} href="/"
+						><i class="fa-solid fa-arrow-up-left-from-circle"> a</i>Logout</a
+					>
+				</li>
 			{:else}
-				<li><a sveltekit:prefetch href="/login">Login</a></li>
-				<li><a sveltekit:prefetch href="/register">Signup</a></li>
+				<li>
+					<a sveltekit:prefetch href="/login"
+						><i class="fa-solid fa-arrow-right-to-bracket" />Login</a
+					>
+				</li>
+				<li>
+					<a sveltekit:prefetch href="/register"><i class="fa-solid fa-user-plus" />Signup</a>
+				</li>
 			{/if}
 		</ul>
 	</div>

@@ -13,6 +13,7 @@
 	<link rel="manifest" crossorigin="use-credentials" href="/manifest.json" />
 	<link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
 	<link rel="icon" href="/favicon.png" />
+	<script src="https://kit.fontawesome.com/86ac87a941.js" crossorigin="anonymous"></script>
 </svelte:head>
 <NavBar />
 

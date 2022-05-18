@@ -12,7 +12,7 @@
 </svelte:head>
 
 <main>
-	<h1 class="text-white">HOME</h1>
+	<h1 class="text-base-content">HOME</h1>
 
 	<PlantCard />
 </main>
