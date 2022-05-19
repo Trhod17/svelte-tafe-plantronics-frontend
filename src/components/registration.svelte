@@ -176,13 +176,13 @@
 		const nameLength = name.length;
 
 		if (nameLength == 0) {
-			return inputInvalid(option, 'First name required');
+			return inputInvalid(option, 'This is required');
 		}
 		if (nameLength <= 2) {
-			return inputInvalid(option, 'First name to short');
+			return inputInvalid(option, 'This is to short');
 		}
 		if (nameLength >= 3) {
-			return inputValid(option, 'First name is valid');
+			return inputValid(option, 'This is valid');
 		}
 	}
 
@@ -268,6 +268,8 @@
 		<label class="label" for="username">
 			<span class="label-text">Username:</span>
 		</label>
+		<div class="flex flex-row">
+			<i class:bg-error={!usernameValid} class:bg-primary={usernameValid} class="fa-solid fa-user place-self-beginning flex-1 mx-0 fa-xl px-3 pt-6 pb-5 rounded-l-full align-bottom my-auto text-primary-content border" />
 		<input
 			on:input
 			bind:value={$data.account.username}
@@ -275,12 +277,13 @@
 			placeholder="Username"
 			name="username"
 			id="username"
-			class="input input-bordered w-full max-w-xs"
+			class="input input-bordered w-full max-w-xs mx-0 px-10 rounded-l-none flex-initial"
 			class:input-error={!usernameValid}
 			class:input-success={usernameValid}
 			required
 			autocomplete="username"
 		/>
+		</div>
 		<div>{usernameMessage}</div>
 	</div>
 	<div class="p-2" />
@@ -288,6 +291,8 @@
 		<label class="label" for="firstname">
 			<span class="label-text">First Name:</span>
 		</label>
+		<div class="flex flex-row">
+			<i class:bg-error={!fNameValid} class:bg-primary={fNameValid} class="fa-solid fa-user place-self-beginning flex-1 mx-0 fa-xl px-3 pt-6 pb-5 rounded-l-full align-bottom my-auto text-primary-content border" />
 		<input
 			on:input
 			bind:value={$data.account.firstname}
@@ -295,12 +300,13 @@
 			placeholder="First Name"
 			name="firstname"
 			id="firstname"
-			class="input input-bordered w-full max-w-xs"
+			class="input input-bordered w-full max-w-xs mx-0 px-10 rounded-l-none flex-initial"
 			required
 			autocomplete="given-name"
 			class:input-error={!fNameValid}
 			class:input-success={fNameValid}
 		/>
+		</div>
 		<div>{fNameMessage}</div>
 	</div>
 	<div class="p-2" />
@@ -308,6 +314,8 @@
 		<label class="label" for="lastname">
 			<span class="label-text">Last Name:</span>
 		</label>
+		<div class="flex flex-row">
+			<i class:bg-error={!lNameValid} class:bg-primary={lNameValid} class="fa-solid fa-user place-self-beginning flex-1 mx-0 fa-xl px-3 pt-6 pb-5 rounded-l-full align-bottom my-auto text-primary-content border" />
 		<input
 			on:input
 			bind:value={$data.account.lastname}
@@ -315,12 +323,13 @@
 			placeholder="Last Name"
 			name="lastname"
 			id="lastname"
-			class="input input-bordered w-full max-w-xs"
+			class="input input-bordered w-full max-w-xs mx-0 px-10 rounded-l-none flex-initial"
 			required
 			autocomplete="family-name"
 			class:input-error={!lNameValid}
 			class:input-success={lNameValid}
 		/>
+		</div>
 		<div>{lNameMessage}</div>
 	</div>
 	<div class="p-2" />
@@ -328,6 +337,8 @@
 		<label class="label" for="email">
 			<span class="label-text">Email:</span>
 		</label>
+		<div class="flex flex-row">
+			<i class:bg-error={!emailValid} class:bg-primary={emailValid} class="fa-solid fa-envelope place-self-beginning flex-1 mx-0 fa-xl px-3 pt-6 pb-5 rounded-l-full align-bottom my-auto text-primary-content border" />
 		<input
 			on:input
 			bind:value={$data.account.email}
@@ -335,12 +346,13 @@
 			placeholder="Email"
 			name="email"
 			id="email"
-			class="input input-bordered w-full max-w-xs"
+			class="input input-bordered w-full max-w-xs mx-0 px-10 rounded-l-none flex-initial"
 			required
 			autocomplete="email"
 			class:input-error={!emailValid}
 			class:input-success={emailValid}
 		/>
+		</div>
 		<div>{emailMessage}</div>
 	</div>
 	<div class="p-2" />
@@ -348,6 +360,8 @@
 		<label class="label" for="password">
 			<span class="label-text">Password:</span>
 		</label>
+		<div class="flex flex-row">
+			<i class:bg-error={!passwordValid} class:bg-primary={passwordValid} class="fa-solid fa-key place-self-beginning flex-1 mx-0 fa-xl px-3 pt-6 pb-5 rounded-l-full align-bottom my-auto text-primary-content border" />
 		<input
 			bind:value={$data.account.password}
 			on:input
@@ -355,12 +369,13 @@
 			placeholder="Password"
 			name="password"
 			id="password"
-			class="input input-bordered w-full max-w-xs"
+			class="input input-bordered w-full max-w-xs mx-0 px-10 rounded-l-none flex-initial"
 			required
 			autocomplete="new-password"
 			class:input-error={!passwordValid}
 			class:input-success={passwordValid}
 		/>
+		</div>
 		<div>{passwordMatch}</div>
 		<div>{passwordMessage}</div>
 	</div>
@@ -369,6 +384,8 @@
 		<label class="label" for="password">
 			<span class="label-text">Confirm Password:</span>
 		</label>
+		<div class="flex flex-row">
+			<i class="fa-solid fa-key place-self-beginning bg-primary flex-1 mx-0 fa-xl px-3 pt-6 pb-5 rounded-l-full align-bottom my-auto text-primary-content border" />
 		<input
 			bind:value={password2}
 			on:input
@@ -376,10 +393,11 @@
 			placeholder="Confirm Password"
 			name="password"
 			id="password2"
-			class="input input-bordered w-full max-w-xs"
+			class="input input-bordered w-full max-w-xs mx-0 px-10 rounded-l-none flex-initial"
 			autocomplete="new-password"
 			required
 		/>
+		</div>
 		<div>{passwordMatch}</div>
 		<div>{passwordMessage2}</div>
 	</div>

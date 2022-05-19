@@ -49,11 +49,11 @@
 				</div>
 				<div class="card-actions justify-center">
 					{#if $store != null}
-						<a class="btn btn-info" role="button" sveltekit:prefetch href="plants/{plant.id}">
-							Goto {plant.plant_name}
+						<a class="btn btn-info" role="button" sveltekit:prefetch href="plants/{plant.id}">	
+						<pre><i class="fa-solid fa-seedling fa-xl"> </i> Goto {plant.plant_name} </pre>
 						</a>
 
-						<a class="btn btn-info" role="button" sveltekit:prefetch href="/"> Add to My Plants </a>
+						<a class="btn btn-info" role="button" sveltekit:prefetch href="/profile/myplants"> Add to My Plants </a>
 					{/if}
 				</div>
 			</div>
