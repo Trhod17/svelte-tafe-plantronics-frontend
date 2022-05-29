@@ -53,7 +53,7 @@
 						<pre><i class="fa-solid fa-seedling fa-xl"> </i> Goto {plant.plant_name} </pre>
 						</a>
 
-						<a class="btn btn-info" role="button" sveltekit:prefetch href="/profile/myplants"> Add to My Plants </a>
+						<a class="btn btn-base-200 btn-disabled" role="button" sveltekit:prefetch href="/profile/myplants"> Add to My Plants </a>
 					{/if}
 				</div>
 			</div>
