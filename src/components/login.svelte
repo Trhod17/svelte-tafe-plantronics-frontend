@@ -78,39 +78,42 @@
 		<label class="label" for="username">
 			<span class="label-text">Username:</span>
 		</label>
-		<div class=" flex flex-row">
-		<i class="fa-regular fa-user place-self-beginning flex-1 mx-0 fa-xl px-3 pt-6 pb-5 rounded-l-full align-bottom my-auto bg-primary text-primary-content border" />
-		<input
-			on:input
-			bind:value={$data.account.username}
-			type="text"
-			placeholder="Username"
-			name="username"
-			id="username"
-			class="input input-bordered w-100 max-w-xs mx-0 px-10 rounded-l-none flex-initial"
-			required
-			autocomplete="username"
-		>
-	</div>
+		<label class="input-group input-group-xl">
+			<span
+				class="fa-solid fa-user label-text bg-primary fa-xl"
+				style="color: black; font-size: 1.3em;"
+			/>
+			<input
+				on:input
+				bind:value={$data.account.username}
+				type="text"
+				placeholder="Username"
+				name="username"
+				id="username"
+				class="input input-bordered w-100 max-w-xs px-10"
+				required
+				autocomplete="username"
+			/>
+		</label>
 	</div>
 	<div class="p-2" />
 	<div class="form-control w-full max-w-xs">
 		<label class="label" for="password">
 			<span class="label-text">Password:</span>
 		</label>
-		<div class="flex flex-row">
-			<i class="fa-solid fa-key place-self-beginning flex-1 mx-0 fa-xl px-3 pt-6 pb-5 rounded-l-full align-bottom my-auto bg-primary text-primary-content border" />
-		<input
-			bind:value={$data.account.password}
-			on:input
-			type="password"
-			placeholder="Password"
-			name="password"
-			id="password"
-			class="input input-bordered w-full max-w-xs mx-0 px-10 rounded-l-none flex-initial"
-			autocomplete="current=password"
-		/>
-		</div>
+		<label class="input-group input-group-xl">
+			<span class="fa-solid fa-key label-text bg-primary" style="color: black; font-size: 1.3em;" />
+			<input
+				bind:value={$data.account.password}
+				on:input
+				type="password"
+				placeholder="Password"
+				name="password"
+				id="password"
+				class="input input-bordered w-full max-w-xs px-10"
+				autocomplete="current=password"
+			/>
+		</label>
 	</div>
 	<div>{loginMessage}</div>
 	<div class="p-2" />
