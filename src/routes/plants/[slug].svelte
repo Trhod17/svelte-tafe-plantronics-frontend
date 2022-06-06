@@ -16,6 +16,7 @@
 
 <script lang='ts'>
 	import { onMount } from 'svelte';
+	import Help from '../../components/help.svelte';
 
 	let data: any = [];
 
@@ -53,6 +54,7 @@
 
 <main lang="en">
 	<PlantTab active={0} {slug} />
+	<Help help="../help#plantpage"/>
 	<div class="p-3" />
 	<div class="card border w-10/12 text-base-content ml-6 bg-primary-focus">
 		<div class="card-body whitespace-pre-wrap text-sm break-words">

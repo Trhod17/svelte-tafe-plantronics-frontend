@@ -20,13 +20,13 @@ __export(stdin_exports, {
   w: () => writable
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_de5ece87 = require("./index-de5ece87.js");
+var import_index_2c175e7b = require("./index-2c175e7b.js");
 const subscriber_queue = [];
-function writable(value, start = import_index_de5ece87.n) {
+function writable(value, start = import_index_2c175e7b.n) {
   let stop;
   const subscribers = /* @__PURE__ */ new Set();
   function set(new_value) {
-    if ((0, import_index_de5ece87.b)(value, new_value)) {
+    if ((0, import_index_2c175e7b.b)(value, new_value)) {
       value = new_value;
       if (stop) {
         const run_queue = !subscriber_queue.length;
@@ -46,11 +46,11 @@ function writable(value, start = import_index_de5ece87.n) {
   function update(fn) {
     set(fn(value));
   }
-  function subscribe(run, invalidate = import_index_de5ece87.n) {
+  function subscribe(run, invalidate = import_index_2c175e7b.n) {
     const subscriber = [run, invalidate];
     subscribers.add(subscriber);
     if (subscribers.size === 1) {
-      stop = start(set) || import_index_de5ece87.n;
+      stop = start(set) || import_index_2c175e7b.n;
     }
     run(value);
     return () => {

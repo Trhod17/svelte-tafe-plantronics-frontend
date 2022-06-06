@@ -4,7 +4,7 @@
     "src": ".svelte-kit/build/index.js",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js"
+      "_index-2c175e7b.js"
     ],
     "dynamicImports": [
       ".svelte-kit/build/hooks.js"
@@ -15,12 +15,12 @@
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_auth-68aeceae.js",
-      "_index-fadab37b.js"
+      "_index-2c175e7b.js",
+      "_auth-8dce061a.js",
+      "_index-8c592b0b.js"
     ],
     "css": [
-      "assets/entries/pages/__layout.svelte-4c98e6d4.css"
+      "assets/entries/pages/__layout.svelte-6055ac1a.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -28,7 +28,7 @@
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js"
+      "_index-2c175e7b.js"
     ]
   },
   "src/routes/about.svelte": {
@@ -36,10 +36,18 @@
     "src": "src/routes/about.svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js"
+      "_index-2c175e7b.js"
     ],
     "css": [
       "assets/entries/pages/about.svelte-4f8e696d.css"
+    ]
+  },
+  "src/routes/help.svelte": {
+    "file": "entries/pages/help.svelte.js",
+    "src": "src/routes/help.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-2c175e7b.js"
     ]
   },
   "src/routes/index.svelte": {
@@ -47,9 +55,9 @@
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_auth-68aeceae.js",
-      "_index-fadab37b.js"
+      "_index-2c175e7b.js",
+      "_auth-8dce061a.js",
+      "_index-8c592b0b.js"
     ],
     "css": [
       "assets/entries/pages/index.svelte-2d099447.css"
@@ -60,10 +68,11 @@
     "src": "src/routes/login.svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_auth-68aeceae.js",
-      "_create-form-80011629.js",
-      "_index-fadab37b.js"
+      "_index-2c175e7b.js",
+      "_auth-8dce061a.js",
+      "_help-40959013.js",
+      "_create-form-1a6798e1.js",
+      "_index-8c592b0b.js"
     ]
   },
   "src/routes/plants/[slug].svelte": {
@@ -71,10 +80,11 @@
     "src": "src/routes/plants/[slug].svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_planttab-36ba882b.js",
-      "_auth-68aeceae.js",
-      "_index-fadab37b.js"
+      "_index-2c175e7b.js",
+      "_planttab-bc0c9666.js",
+      "_auth-8dce061a.js",
+      "_help-40959013.js",
+      "_index-8c592b0b.js"
     ]
   },
   "src/routes/plants/edible/[slug].svelte": {
@@ -82,10 +92,11 @@
     "src": "src/routes/plants/edible/[slug].svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_index-fadab37b.js",
-      "_planttab-36ba882b.js",
-      "_nodata-4fe287a2.js"
+      "_index-2c175e7b.js",
+      "_help-40959013.js",
+      "_index-8c592b0b.js",
+      "_planttab-bc0c9666.js",
+      "_nodata-da882406.js"
     ]
   },
   "src/routes/plants/info/[slug].svelte": {
@@ -93,10 +104,11 @@
     "src": "src/routes/plants/info/[slug].svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_planttab-36ba882b.js",
-      "_index-fadab37b.js",
-      "_nodata-4fe287a2.js"
+      "_index-2c175e7b.js",
+      "_help-40959013.js",
+      "_planttab-bc0c9666.js",
+      "_index-8c592b0b.js",
+      "_nodata-da882406.js"
     ]
   },
   "src/routes/plants/soil/[slug].svelte": {
@@ -104,10 +116,11 @@
     "src": "src/routes/plants/soil/[slug].svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_index-fadab37b.js",
-      "_planttab-36ba882b.js",
-      "_nodata-4fe287a2.js"
+      "_index-2c175e7b.js",
+      "_help-40959013.js",
+      "_index-8c592b0b.js",
+      "_planttab-bc0c9666.js",
+      "_nodata-da882406.js"
     ]
   },
   "src/routes/profile/myplants.svelte": {
@@ -115,10 +128,11 @@
     "src": "src/routes/profile/myplants.svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_auth-68aeceae.js",
-      "_profiletab-81bf1836.js",
-      "_index-fadab37b.js"
+      "_index-2c175e7b.js",
+      "_help-40959013.js",
+      "_auth-8dce061a.js",
+      "_profiletab-3365072d.js",
+      "_index-8c592b0b.js"
     ]
   },
   "src/routes/profile.svelte": {
@@ -126,10 +140,10 @@
     "src": "src/routes/profile.svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_auth-68aeceae.js",
-      "_profiletab-81bf1836.js",
-      "_index-fadab37b.js"
+      "_index-2c175e7b.js",
+      "_auth-8dce061a.js",
+      "_profiletab-3365072d.js",
+      "_index-8c592b0b.js"
     ]
   },
   "src/routes/register.svelte": {
@@ -137,50 +151,57 @@
     "src": "src/routes/register.svelte",
     "isEntry": true,
     "imports": [
-      "_index-de5ece87.js",
-      "_auth-68aeceae.js",
-      "_create-form-80011629.js",
-      "_index-fadab37b.js"
+      "_index-2c175e7b.js",
+      "_auth-8dce061a.js",
+      "_help-40959013.js",
+      "_create-form-1a6798e1.js",
+      "_index-8c592b0b.js"
     ]
   },
-  "_index-de5ece87.js": {
-    "file": "chunks/index-de5ece87.js"
+  "_index-2c175e7b.js": {
+    "file": "chunks/index-2c175e7b.js"
   },
-  "_auth-68aeceae.js": {
-    "file": "chunks/auth-68aeceae.js",
+  "_auth-8dce061a.js": {
+    "file": "chunks/auth-8dce061a.js",
     "imports": [
-      "_index-fadab37b.js"
+      "_index-8c592b0b.js"
     ]
   },
-  "_index-fadab37b.js": {
-    "file": "chunks/index-fadab37b.js",
+  "_index-8c592b0b.js": {
+    "file": "chunks/index-8c592b0b.js",
     "imports": [
-      "_index-de5ece87.js"
+      "_index-2c175e7b.js"
     ]
   },
-  "_create-form-80011629.js": {
-    "file": "chunks/create-form-80011629.js",
+  "_help-40959013.js": {
+    "file": "chunks/help-40959013.js",
     "imports": [
-      "_index-fadab37b.js",
-      "_index-de5ece87.js"
+      "_index-2c175e7b.js"
     ]
   },
-  "_planttab-36ba882b.js": {
-    "file": "chunks/planttab-36ba882b.js",
+  "_create-form-1a6798e1.js": {
+    "file": "chunks/create-form-1a6798e1.js",
     "imports": [
-      "_index-de5ece87.js"
+      "_index-8c592b0b.js",
+      "_index-2c175e7b.js"
     ]
   },
-  "_nodata-4fe287a2.js": {
-    "file": "chunks/nodata-4fe287a2.js",
+  "_planttab-bc0c9666.js": {
+    "file": "chunks/planttab-bc0c9666.js",
     "imports": [
-      "_index-de5ece87.js"
+      "_index-2c175e7b.js"
     ]
   },
-  "_profiletab-81bf1836.js": {
-    "file": "chunks/profiletab-81bf1836.js",
+  "_nodata-da882406.js": {
+    "file": "chunks/nodata-da882406.js",
     "imports": [
-      "_index-de5ece87.js"
+      "_index-2c175e7b.js"
+    ]
+  },
+  "_profiletab-3365072d.js": {
+    "file": "chunks/profiletab-3365072d.js",
+    "imports": [
+      "_index-2c175e7b.js"
     ]
   },
   ".svelte-kit/build/hooks.js": {

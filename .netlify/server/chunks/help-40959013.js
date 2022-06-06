@@ -17,13 +17,13 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  N: () => Nodata
+  H: () => Help
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_de5ece87 = require("./index-de5ece87.js");
-const Nodata = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
-  let { page } = $$props;
-  if ($$props.page === void 0 && $$bindings.page && page !== void 0)
-    $$bindings.page(page);
-  return `<main lang="${"en"}"><p class="${"card-title"}">This plant has no ${(0, import_index_de5ece87.e)(page)}</p></main>`;
+var import_index_2c175e7b = require("./index-2c175e7b.js");
+const Help = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
+  let { help } = $$props;
+  if ($$props.help === void 0 && $$bindings.help && help !== void 0)
+    $$bindings.help(help);
+  return `<a${(0, import_index_2c175e7b.d)("href", help, 0)} class="${"absolute float-right right-1 mr-10 mt-4 z-10 bg-black border rounded-full"}"><i class="${"fa-solid fa-circle-question fa-2xl"}"></i></a>`;
 });

@@ -24,14 +24,15 @@ __export(stdin_exports, {
   prerender: () => prerender
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_de5ece87 = require("../../chunks/index-de5ece87.js");
-var import_auth_68aeceae = require("../../chunks/auth-68aeceae.js");
+var import_index_2c175e7b = require("../../chunks/index-2c175e7b.js");
+var import_auth_8dce061a = require("../../chunks/auth-8dce061a.js");
 var yup = __toESM(require("yup"));
 var import_yup_password = __toESM(require("yup-password"));
 var import_reporter_tippy = __toESM(require("@felte/reporter-tippy"));
 var import_validator_yup = require("@felte/validator-yup");
-var import_create_form_80011629 = require("../../chunks/create-form-80011629.js");
-var import_index_fadab37b = require("../../chunks/index-fadab37b.js");
+var import_help_40959013 = require("../../chunks/help-40959013.js");
+var import_create_form_1a6798e1 = require("../../chunks/create-form-1a6798e1.js");
+var import_index_8c592b0b = require("../../chunks/index-8c592b0b.js");
 var import_axios = require("axios");
 function passwordComparison(pass1, pass2) {
   const pass1Length = pass1.length;
@@ -49,7 +50,7 @@ function passwordComparison(pass1, pass2) {
   }
   return "";
 }
-const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
+const Registration = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
   let canSubmit;
   let usernameValid;
   let passwordValid;
@@ -66,7 +67,7 @@ const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings
   let usernameMessage;
   let $data, $$unsubscribe_data;
   let $$unsubscribe_store;
-  $$unsubscribe_store = (0, import_index_de5ece87.a)(import_auth_68aeceae.s, (value) => value);
+  $$unsubscribe_store = (0, import_index_2c175e7b.a)(import_auth_8dce061a.s, (value) => value);
   (0, import_yup_password.default)(yup);
   const schema = yup.object({
     account: yup.object({
@@ -77,7 +78,7 @@ const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings
       password: yup.string().required().minUppercase(1).minNumbers(1).max(128).min(8)
     })
   });
-  const { form, data, unsetField, addField } = (0, import_create_form_80011629.c)({
+  const { form, data, unsetField, addField } = (0, import_create_form_1a6798e1.c)({
     initialValues: {
       account: {
         username: "",
@@ -123,7 +124,7 @@ const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings
       }
     }
   });
-  $$unsubscribe_data = (0, import_index_de5ece87.a)(data, (value) => $data = value);
+  $$unsubscribe_data = (0, import_index_2c175e7b.a)(data, (value) => $data = value);
   let usernameTaken = false;
   const hasUpperCase = (str) => /[a-z]/.test(str) && /[A-Z]/.test(str);
   const hasNumber = (str) => /\d/.test(str);
@@ -241,6 +242,7 @@ const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings
 
 
 
+${(0, import_index_2c175e7b.v)(import_help_40959013.H, "Help").$$render($$result, { help: "../help#register" }, {}, {})}
 <form class="${"ml-5 w-3/4"}"><div class="${"p-2"}"></div>
 	<div class="${"form-control w-full max-w-xs"}"><label class="${"label"}" for="${"username"}"><span class="${"label-text"}">Username:</span></label>
 		<label class="${"input-group input-group-lg"}"><span class="${[
@@ -250,8 +252,8 @@ const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings
 			<input type="${"text"}" placeholder="${"Username"}" name="${"username"}" id="${"username"}" class="${[
     "input input-bordered w-full max-w-xs px-10",
     (!usernameValid ? "input-error" : "") + " " + (usernameValid ? "input-success" : "")
-  ].join(" ").trim()}" required autocomplete="${"username"}"${(0, import_index_de5ece87.f)("value", $data.account.username, 0)}></label>
-		<div>${(0, import_index_de5ece87.e)(usernameMessage)}</div></div>
+  ].join(" ").trim()}" required autocomplete="${"username"}"${(0, import_index_2c175e7b.d)("value", $data.account.username, 0)}></label>
+		<div>${(0, import_index_2c175e7b.e)(usernameMessage)}</div></div>
 	<div class="${"p-2"}"></div>
 	<div class="${"form-control w-full max-w-xs"}"><label class="${"label"}" for="${"firstname"}"><span class="${"label-text"}">First Name:</span></label>
 		<label class="${"input-group input-group-lg"}"><span class="${[
@@ -261,8 +263,8 @@ const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings
 			<input type="${"text"}" placeholder="${"First Name"}" name="${"firstname"}" id="${"firstname"}" class="${[
     "input input-bordered w-full max-w-xs px-10",
     (!fNameValid ? "input-error" : "") + " " + (fNameValid ? "input-success" : "")
-  ].join(" ").trim()}" required autocomplete="${"given-name"}"${(0, import_index_de5ece87.f)("value", $data.account.firstname, 0)}></label>
-		<div>${(0, import_index_de5ece87.e)(fNameMessage)}</div></div>
+  ].join(" ").trim()}" required autocomplete="${"given-name"}"${(0, import_index_2c175e7b.d)("value", $data.account.firstname, 0)}></label>
+		<div>${(0, import_index_2c175e7b.e)(fNameMessage)}</div></div>
 	<div class="${"p-2"}"></div>
 	<div class="${"form-control w-full max-w-xs"}"><label class="${"label"}" for="${"lastname"}"><span class="${"label-text"}">Last Name:</span></label>
 		<label class="${"input-group input-group-lg"}"><span class="${[
@@ -272,8 +274,8 @@ const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings
 			<input type="${"text"}" placeholder="${"Last Name"}" name="${"lastname"}" id="${"lastname"}" class="${[
     "input input-bordered w-full max-w-xs px-10",
     (!lNameValid ? "input-error" : "") + " " + (lNameValid ? "input-success" : "")
-  ].join(" ").trim()}" required autocomplete="${"family-name"}"${(0, import_index_de5ece87.f)("value", $data.account.lastname, 0)}></label>
-		<div>${(0, import_index_de5ece87.e)(lNameMessage)}</div></div>
+  ].join(" ").trim()}" required autocomplete="${"family-name"}"${(0, import_index_2c175e7b.d)("value", $data.account.lastname, 0)}></label>
+		<div>${(0, import_index_2c175e7b.e)(lNameMessage)}</div></div>
 	<div class="${"p-2"}"></div>
 	<div class="${"form-control w-full max-w-xs"}"><label class="${"label"}" for="${"email"}"><span class="${"label-text"}">Email:</span></label>
 		<label class="${"input-group input-group-lg"}"><span class="${[
@@ -283,8 +285,8 @@ const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings
 			<input type="${"email"}" placeholder="${"Email"}" name="${"email"}" id="${"email"}" class="${[
     "input input-bordered w-full max-w-xs px-10",
     (!emailValid ? "input-error" : "") + " " + (emailValid ? "input-success" : "")
-  ].join(" ").trim()}" required autocomplete="${"email"}"${(0, import_index_de5ece87.f)("value", $data.account.email, 0)}></label>
-		<div>${(0, import_index_de5ece87.e)(emailMessage)}</div></div>
+  ].join(" ").trim()}" required autocomplete="${"email"}"${(0, import_index_2c175e7b.d)("value", $data.account.email, 0)}></label>
+		<div>${(0, import_index_2c175e7b.e)(emailMessage)}</div></div>
 	<div class="${"p-2"}"></div>
 	<div class="${"form-control w-full max-w-xs"}"><label class="${"label"}" for="${"password"}"><span class="${"label-text"}">Password:</span></label>
 		<label class="${"input-group input-group-xl"}"><span class="${[
@@ -294,34 +296,34 @@ const Registration = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings
 			<input type="${"password"}" placeholder="${"Password"}" name="${"password"}" id="${"password"}" class="${[
     "input input-bordered w-full max-w-xspx-10",
     (!passwordValid ? "input-error" : "") + " " + (passwordValid ? "input-success" : "")
-  ].join(" ").trim()}" required autocomplete="${"new-password"}"${(0, import_index_de5ece87.f)("value", $data.account.password, 0)}></label>
-		<div>${(0, import_index_de5ece87.e)(passwordMatch)}</div>
-		<div>${(0, import_index_de5ece87.e)(passwordMessage)}</div></div>
+  ].join(" ").trim()}" required autocomplete="${"new-password"}"${(0, import_index_2c175e7b.d)("value", $data.account.password, 0)}></label>
+		<div>${(0, import_index_2c175e7b.e)(passwordMatch)}</div>
+		<div>${(0, import_index_2c175e7b.e)(passwordMessage)}</div></div>
 	<div class="${"p-2"}"></div>
 	<div class="${"form-control w-full max-w-xs"}"><label class="${"label"}" for="${"password"}"><span class="${"label-text"}">Confirm Password:</span></label>
 		<label class="${"input-group input-group-xl"}"><span class="${"fa-solid fa-key bg-primary"}" style="${"color: black; font-size: 1.3em;"}"></span>
-			<input type="${"password"}" placeholder="${"Confirm Password"}" name="${"password"}" id="${"password2"}" class="${"input input-bordered w-full max-w-xs px-10"}" autocomplete="${"new-password"}" required${(0, import_index_de5ece87.f)("value", password2, 0)}></label>
-		<div>${(0, import_index_de5ece87.e)(passwordMatch)}</div>
-		<div>${(0, import_index_de5ece87.e)(passwordMessage2)}</div></div>
+			<input type="${"password"}" placeholder="${"Confirm Password"}" name="${"password"}" id="${"password2"}" class="${"input input-bordered w-full max-w-xs px-10"}" autocomplete="${"new-password"}" required${(0, import_index_2c175e7b.d)("value", password2, 0)}></label>
+		<div>${(0, import_index_2c175e7b.e)(passwordMatch)}</div>
+		<div>${(0, import_index_2c175e7b.e)(passwordMessage2)}</div></div>
 	<div class="${"p-2"}"></div>
 	<div class="${"form-control w-full max-w-xs"}"><label class="${"label cursor-pointer"}"><span class="${"label-text"}">Accept Terms and Conditions</span>
-			<input type="${"checkbox"}" class="${"toggle toggle-primary"}"${(0, import_index_de5ece87.f)("checked", accept, 1)}></label>
+			<input type="${"checkbox"}" class="${"toggle toggle-primary"}"${(0, import_index_2c175e7b.d)("checked", accept, 1)}></label>
 		<input type="${"submit"}" value="${"Register"}" ${!canSubmit ? "disabled" : ""} class="${"btn btn-accent w-50 "}"></div>
 </form>`;
 });
-const Registered = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
+const Registered = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
   let $store, $$unsubscribe_store;
-  $$unsubscribe_store = (0, import_index_de5ece87.a)(import_auth_68aeceae.s, (value) => $store = value);
+  $$unsubscribe_store = (0, import_index_2c175e7b.a)(import_auth_8dce061a.s, (value) => $store = value);
   $$unsubscribe_store();
-  return `<main>Congratulations ${(0, import_index_de5ece87.e)($store[0])} Your account has been successfully created
+  return `<main>Congratulations ${(0, import_index_2c175e7b.e)($store[0])} Your account has been successfully created
 </main>`;
 });
 const prerender = true;
-const Register = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
+const Register = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
   let $store, $$unsubscribe_store;
-  $$unsubscribe_store = (0, import_index_de5ece87.a)(import_auth_68aeceae.s, (value) => $store = value);
+  $$unsubscribe_store = (0, import_index_2c175e7b.a)(import_auth_8dce061a.s, (value) => $store = value);
   $$unsubscribe_store();
   return `${$$result.head += `${$$result.title = `<title>Registration</title>`, ""}<meta name="${"description"}" content="${"Plantronics Registration Page"}" data-svelte="svelte-gl1uj9">`, ""}
 
-${$store != null ? `${(0, import_index_de5ece87.v)(Registered, "AfterRegistration").$$render($$result, {}, {}, {})}` : `${(0, import_index_de5ece87.v)(Registration, "RegistrationComponent").$$render($$result, {}, {}, {})}`}`;
+${$store != null ? `${(0, import_index_2c175e7b.v)(Registered, "AfterRegistration").$$render($$result, {}, {}, {})}` : `${(0, import_index_2c175e7b.v)(Registration, "RegistrationComponent").$$render($$result, {}, {}, {})}`}`;
 });

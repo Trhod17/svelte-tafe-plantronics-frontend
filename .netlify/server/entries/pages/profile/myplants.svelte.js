@@ -20,26 +20,28 @@ __export(stdin_exports, {
   default: () => Myplants
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_de5ece87 = require("../../../chunks/index-de5ece87.js");
-var import_auth_68aeceae = require("../../../chunks/auth-68aeceae.js");
-var import_profiletab_81bf1836 = require("../../../chunks/profiletab-81bf1836.js");
-var import_index_fadab37b = require("../../../chunks/index-fadab37b.js");
+var import_index_2c175e7b = require("../../../chunks/index-2c175e7b.js");
+var import_help_40959013 = require("../../../chunks/help-40959013.js");
+var import_auth_8dce061a = require("../../../chunks/auth-8dce061a.js");
+var import_profiletab_3365072d = require("../../../chunks/profiletab-3365072d.js");
+var import_index_8c592b0b = require("../../../chunks/index-8c592b0b.js");
 var import_axios = require("axios");
-const MyPlants = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
+const MyPlants = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_store;
-  $$unsubscribe_store = (0, import_index_de5ece87.a)(import_auth_68aeceae.s, (value) => value);
+  $$unsubscribe_store = (0, import_index_2c175e7b.a)(import_auth_8dce061a.s, (value) => value);
   let { data = [] } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   $$unsubscribe_store();
-  return `${data != "" ? `${(0, import_index_de5ece87.d)(data.userplants, (plant) => {
-    return `<div class="${"card card-compact lg:card-side bg-success-content text-base-content shadow-xl"}"><div class="${"card-body"}"><h2 class="${"card-title"}">Plant: ${(0, import_index_de5ece87.e)(plant.plant__plant_name)}</h2>
-				<h2 class="${"card-title"}">Owned By: ${(0, import_index_de5ece87.e)(plant.user__username)}</h2>
+  return `${data != "" ? `${(0, import_index_2c175e7b.f)(data.userplants, (plant) => {
+    return `<div class="${"card card-compact lg:card-side bg-success-content text-base-content shadow-xl"}"><div class="${"card-body"}"><h2 class="${"card-title"}">Plant: ${(0, import_index_2c175e7b.e)(plant.plant__plant_name)}</h2>
+				<h2 class="${"card-title"}">Owned By: ${(0, import_index_2c175e7b.e)(plant.user__username)}</h2>
 			</div></div>
 		<div class="${"p-2"}"></div>`;
   })}` : ``}`;
 });
-const Myplants = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
-  return `${(0, import_index_de5ece87.v)(import_profiletab_81bf1836.P, "ProfileTab").$$render($$result, { active: 1 }, {}, {})}
-${(0, import_index_de5ece87.v)(MyPlants, "MyPlants").$$render($$result, {}, {}, {})}`;
+const Myplants = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
+  return `${(0, import_index_2c175e7b.v)(import_profiletab_3365072d.P, "ProfileTab").$$render($$result, { active: 1 }, {}, {})}
+${(0, import_index_2c175e7b.v)(import_help_40959013.H, "Help").$$render($$result, { help: "../help#myplants" }, {}, {})}
+${(0, import_index_2c175e7b.v)(MyPlants, "MyPlants").$$render($$result, {}, {}, {})}`;
 });

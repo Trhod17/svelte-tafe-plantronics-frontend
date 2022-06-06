@@ -17,27 +17,9 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  default: () => Error2,
-  load: () => load
+  s: () => store
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_2c175e7b = require("../../chunks/index-2c175e7b.js");
-function load({ error, status }) {
-  return { props: { error, status } };
-}
-const Error2 = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
-  let { status } = $$props;
-  let { error } = $$props;
-  if ($$props.status === void 0 && $$bindings.status && status !== void 0)
-    $$bindings.status(status);
-  if ($$props.error === void 0 && $$bindings.error && error !== void 0)
-    $$bindings.error(error);
-  return `<h1>${(0, import_index_2c175e7b.e)(status)}</h1>
-
-<pre>${(0, import_index_2c175e7b.e)(error.message)}</pre>
-
-
-
-${error.frame ? `<pre>${(0, import_index_2c175e7b.e)(error.frame)}</pre>` : ``}
-${error.stack ? `<pre>${(0, import_index_2c175e7b.e)(error.stack)}</pre>` : ``}`;
-});
+var import_index_8c592b0b = require("./index-8c592b0b.js");
+var import_axios = require("axios");
+const store = (0, import_index_8c592b0b.w)(null);

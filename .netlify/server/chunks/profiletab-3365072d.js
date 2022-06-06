@@ -20,8 +20,8 @@ __export(stdin_exports, {
   P: () => Profiletab
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_de5ece87 = require("./index-de5ece87.js");
-const Profiletab = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
+var import_index_2c175e7b = require("./index-2c175e7b.js");
+const Profiletab = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
   let { active } = $$props;
   if ($$props.active === void 0 && $$bindings.active && active !== void 0)
     $$bindings.active(active);

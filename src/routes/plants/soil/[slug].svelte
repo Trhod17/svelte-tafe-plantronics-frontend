@@ -2,6 +2,7 @@
 	import NoData from '../../../components/nodata.svelte';
 	import PlantTab from '../../../components/planttab.svelte';
 	import { writable } from 'svelte/store';
+import Help from '../../../components/help.svelte';
 
 	export let soil: any = [];
 
@@ -53,6 +54,7 @@
 
 <main lang="en">
 	<PlantTab active={2} {slug} />
+	<Help help="../help#plantpage"/>
 	<div class="p-3" />
 	<div class="card border w-10/12 text-base-content ml-6">
 		{#if soil != '' && hasData}

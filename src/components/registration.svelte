@@ -11,6 +11,7 @@
 	import reporter from '@felte/reporter-tippy';
 	import { validator } from '@felte/validator-yup';
 	import { invalid_attribute_name_character } from 'svelte/internal';
+import Help from './help.svelte';
 
 	// Creating yup schema
 	const schema = yup.object({
@@ -262,6 +263,7 @@
 
 <!--  -->
 
+<Help help="../help#register"/>
 <form use:form on:submit|preventDefault={register} class="ml-5 w-3/4">
 	<div class="p-2" />
 	<div class="form-control w-full max-w-xs">

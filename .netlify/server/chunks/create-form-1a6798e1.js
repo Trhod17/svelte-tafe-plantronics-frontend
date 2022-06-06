@@ -20,8 +20,8 @@ __export(stdin_exports, {
   c: () => createForm
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_fadab37b = require("./index-fadab37b.js");
-var import_index_de5ece87 = require("./index-de5ece87.js");
+var import_index_8c592b0b = require("./index-8c592b0b.js");
+var import_index_2c175e7b = require("./index-2c175e7b.js");
 function subscribe(store, ...callbacks) {
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
@@ -1567,10 +1567,10 @@ function __rest(s, e) {
 }
 function createForm(config) {
   var _a = createForm$1(config !== null && config !== void 0 ? config : {}, {
-    storeFactory: import_index_fadab37b.w
+    storeFactory: import_index_8c592b0b.w
   }), cleanup = _a.cleanup;
   _a.startStores;
   var rest = __rest(_a, ["cleanup", "startStores"]);
-  (0, import_index_de5ece87.o)(cleanup);
+  (0, import_index_2c175e7b.o)(cleanup);
   return rest;
 }

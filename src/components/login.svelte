@@ -11,6 +11,7 @@
 	YupPassword(yup);
 	import reporter from '@felte/reporter-tippy';
 	import { validator } from '@felte/validator-yup';
+import Help from './help.svelte';
 
 	let submitted;
 
@@ -72,6 +73,8 @@
 		crossorigin="anonymous"></script>
 </svelte:head>
 
+
+<Help help="help#login"/>
 <form use:form on:submit|preventDefault={login} class="ml-5 w-3/4">
 	<div class="p-2" />
 	<div class="form-control w-full max-w-xs">

@@ -3,6 +3,7 @@
 	import PlantTab from '../../../components/planttab.svelte';
 	import EdibleSection from '../../../components/edible.svelte';
 	import { writable } from 'svelte/store';
+import Help from '../../../components/help.svelte';
 
 	export let edible: any = [];
 
@@ -55,6 +56,7 @@
 
 <main lang="en">
 	<PlantTab active={3} {slug} />
+	<Help help="../help#plantpage"/>
 	<div class="p-3" />
 	<div class="card border w-10/12 text-base-content ml-6">
 		{#if edible != '' && hasData}

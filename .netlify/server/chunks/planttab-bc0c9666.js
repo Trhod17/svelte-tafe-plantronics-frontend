@@ -20,17 +20,17 @@ __export(stdin_exports, {
   P: () => Planttab
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_de5ece87 = require("./index-de5ece87.js");
-const Planttab = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
+var import_index_2c175e7b = require("./index-2c175e7b.js");
+const Planttab = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
   let { slug } = $$props;
   let { active } = $$props;
   if ($$props.slug === void 0 && $$bindings.slug && slug !== void 0)
     $$bindings.slug(slug);
   if ($$props.active === void 0 && $$bindings.active && active !== void 0)
     $$bindings.active(active);
-  return `<div class="${"tabs bg-primary-focus"}"><a class="${["tab tab-bordered w-1/3 text-primary-content", active == 0 ? "tab-active" : ""].join(" ").trim()}" sveltekit:prefetch href="${"/plants/" + (0, import_index_de5ece87.e)(slug)}">Plant</a>
-	<a class="${["tab tab-bordered w-1/3 text-primary-content", active == 1 ? "tab-active" : ""].join(" ").trim()}" sveltekit:prefetch href="${"/plants/info/" + (0, import_index_de5ece87.e)(slug)}">Info</a>
-	<a class="${["tab tab-bordered w-1/3 text-primary-content", active == 2 ? "tab-active" : ""].join(" ").trim()}" sveltekit:prefetch href="${"/plants/soil/" + (0, import_index_de5ece87.e)(slug)}">Soil Preference
+  return `<div class="${"tabs bg-primary-focus"}"><a class="${["tab tab-bordered w-1/2 text-primary-content", active == 0 ? "tab-active" : ""].join(" ").trim()}" sveltekit:prefetch href="${"/plants/" + (0, import_index_2c175e7b.e)(slug)}">Plant</a>
+	<a class="${["tab tab-bordered w-1/2 text-primary-content", active == 1 ? "tab-active" : ""].join(" ").trim()}" sveltekit:prefetch href="${"/plants/info/" + (0, import_index_2c175e7b.e)(slug)}">Info</a>
+	<a class="${["tab tab-bordered w-1/2 text-primary-content", active == 2 ? "tab-active" : ""].join(" ").trim()}" sveltekit:prefetch href="${"/plants/soil/" + (0, import_index_2c175e7b.e)(slug)}">Soil Preference
 	</a>
-	<a class="${["tab tab-bordered w-1/3 text-primary-content", active == 3 ? "tab-active" : ""].join(" ").trim()}" sveltekit:prefetch href="${"/plants/edible/" + (0, import_index_de5ece87.e)(slug)}">Ediblity</a></div>`;
+	<a class="${["tab tab-bordered w-1/2 text-primary-content", active == 3 ? "tab-active" : ""].join(" ").trim()}" sveltekit:prefetch href="${"/plants/edible/" + (0, import_index_2c175e7b.e)(slug)}">Ediblity</a></div>`;
 });

@@ -1,11 +1,13 @@
 <script context="module" lang="ts">
 	export const prerender = true;
+
 </script>
 
 <script lang="ts">
 	import LoginComponent from '../components/login.svelte';
 	import { store } from '../hooks/auth';
 	import AfterLogin from '../components/loggedin.svelte';
+	
 </script>
 
 <svelte:head>
@@ -14,7 +16,7 @@
 </svelte:head>
 
 {#if $store != null}
-	<AfterLogin />
+	<AfterLogin/>
 {:else}
 	<LoginComponent />
 {/if}

@@ -28,20 +28,21 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "icon512.png", "images/icons/icon-128x128.png", "images/icons/icon-144x144.png", "images/icons/icon-152x152.png", "images/icons/icon-192x192.png", "images/icons/icon-384x384.png", "images/icons/icon-512x512.png", "images/icons/icon-72x72.png", "images/icons/icon-96x96.png", "manifest.json", "robots.txt", "svelte-welcome.png", "svelte-welcome.webp", "service-worker.js"]),
   mimeTypes: { ".png": "image/png", ".json": "application/json", ".txt": "text/plain", ".webp": "image/webp" },
   _: {
-    entry: { "file": "start-658089ea.js", "js": ["start-658089ea.js", "chunks/index-64fbd304.js", "chunks/index-7a2515b1.js"], "css": [] },
+    entry: { "file": "start-c67ba7d8.js", "js": ["start-c67ba7d8.js", "chunks/index-64fbd304.js", "chunks/index-7a2515b1.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/3.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/2.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/4.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/10.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/2.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/3.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/5.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/11.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/9.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/6.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/12.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/10.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/7.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/8.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/5.js")))
+      () => Promise.resolve().then(() => __toESM(require("./nodes/9.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/6.js")))
     ],
     routes: [
       {
@@ -68,13 +69,24 @@ const manifest = {
       },
       {
         type: "page",
+        id: "help",
+        pattern: /^\/help\/?$/,
+        names: [],
+        types: [],
+        path: "/help",
+        shadow: null,
+        a: [0, 4],
+        b: [1]
+      },
+      {
+        type: "page",
         id: "login",
         pattern: /^\/login\/?$/,
         names: [],
         types: [],
         path: "/login",
         shadow: null,
-        a: [0, 4],
+        a: [0, 5],
         b: [1]
       },
       {
@@ -85,7 +97,7 @@ const manifest = {
         types: [],
         path: "/profile",
         shadow: null,
-        a: [0, 5],
+        a: [0, 6],
         b: [1]
       },
       {
@@ -96,7 +108,7 @@ const manifest = {
         types: [],
         path: "/register",
         shadow: null,
-        a: [0, 6],
+        a: [0, 7],
         b: [1]
       },
       {
@@ -107,7 +119,7 @@ const manifest = {
         types: [],
         path: "/profile/myplants",
         shadow: null,
-        a: [0, 7],
+        a: [0, 8],
         b: [1]
       },
       {
@@ -118,7 +130,7 @@ const manifest = {
         types: [null],
         path: null,
         shadow: null,
-        a: [0, 8],
+        a: [0, 9],
         b: [1]
       },
       {
@@ -129,7 +141,7 @@ const manifest = {
         types: [null],
         path: null,
         shadow: null,
-        a: [0, 9],
+        a: [0, 10],
         b: [1]
       },
       {
@@ -140,7 +152,7 @@ const manifest = {
         types: [null],
         path: null,
         shadow: null,
-        a: [0, 10],
+        a: [0, 11],
         b: [1]
       },
       {
@@ -151,7 +163,7 @@ const manifest = {
         types: [null],
         path: null,
         shadow: null,
-        a: [0, 11],
+        a: [0, 12],
         b: [1]
       }
     ],

@@ -21,30 +21,30 @@ __export(stdin_exports, {
   prerender: () => prerender
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_de5ece87 = require("../../chunks/index-de5ece87.js");
-var import_auth_68aeceae = require("../../chunks/auth-68aeceae.js");
-var import_profiletab_81bf1836 = require("../../chunks/profiletab-81bf1836.js");
-var import_index_fadab37b = require("../../chunks/index-fadab37b.js");
+var import_index_2c175e7b = require("../../chunks/index-2c175e7b.js");
+var import_auth_8dce061a = require("../../chunks/auth-8dce061a.js");
+var import_profiletab_3365072d = require("../../chunks/profiletab-3365072d.js");
+var import_index_8c592b0b = require("../../chunks/index-8c592b0b.js");
 var import_axios = require("axios");
-const Profile = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
+const Profile = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_store;
-  $$unsubscribe_store = (0, import_index_de5ece87.a)(import_auth_68aeceae.s, (value) => value);
+  $$unsubscribe_store = (0, import_index_2c175e7b.a)(import_auth_8dce061a.s, (value) => value);
   let { data = [] } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   $$unsubscribe_store();
-  return `${(0, import_index_de5ece87.v)(import_profiletab_81bf1836.P, "ProfileTab").$$render($$result, { active: 0 }, {}, {})}
+  return `${(0, import_index_2c175e7b.v)(import_profiletab_3365072d.P, "ProfileTab").$$render($$result, { active: 0 }, {}, {})}
 
 <div class="${"card border w-9/12 text-base-content "}"><div class="${"card-body whitespace-pre-wrap text-sm break-words"}"><p class="${"card-title"}">My Profile</p>
-		<ul>${data != "" ? `<li>Username: ${(0, import_index_de5ece87.e)(data.data.attributes.username)}</li>
-				<li>First Name: ${(0, import_index_de5ece87.e)(data.data.attributes.first_name)}</li>
-				<li>Last Name: ${(0, import_index_de5ece87.e)(data.data.attributes.last_name)}</li>
-				<li>Email: ${(0, import_index_de5ece87.e)(data.data.attributes.email)}</li>` : ``}</ul></div></div>`;
+		<ul>${data != "" ? `<li>Username: ${(0, import_index_2c175e7b.e)(data.data.attributes.username)}</li>
+				<li>First Name: ${(0, import_index_2c175e7b.e)(data.data.attributes.first_name)}</li>
+				<li>Last Name: ${(0, import_index_2c175e7b.e)(data.data.attributes.last_name)}</li>
+				<li>Email: ${(0, import_index_2c175e7b.e)(data.data.attributes.email)}</li>` : ``}</ul></div></div>`;
 });
 const prerender = true;
-const Profile_1 = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
+const Profile_1 = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `${$$result.title = `<title>Profile</title>`, ""}<meta name="${"description"}" content="${"Svelte demo app"}" data-svelte="svelte-19mfyn7">`, ""}
 
-<main>${(0, import_index_de5ece87.v)(Profile, "Profile").$$render($$result, {}, {}, {})}
+<main>${(0, import_index_2c175e7b.v)(Profile, "Profile").$$render($$result, {}, {}, {})}
 </main>`;
 });

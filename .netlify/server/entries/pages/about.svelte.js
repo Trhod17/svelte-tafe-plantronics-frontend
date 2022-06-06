@@ -23,7 +23,7 @@ __export(stdin_exports, {
   router: () => router
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_de5ece87 = require("../../chunks/index-de5ece87.js");
+var import_index_2c175e7b = require("../../chunks/index-2c175e7b.js");
 const browser = false;
 const dev = false;
 var about_svelte_svelte_type_style_lang = "";
@@ -34,7 +34,7 @@ const css = {
 const hydrate = dev;
 const router = browser;
 const prerender = true;
-const About = (0, import_index_de5ece87.c)(($$result, $$props, $$bindings, slots) => {
+const About = (0, import_index_2c175e7b.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `<main class="${"svelte-du1ydg"}"><h1>ABOUT</h1>
 	<hr>
